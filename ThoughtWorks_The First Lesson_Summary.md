@@ -1,6 +1,4 @@
-# <div style="text-align:center">思特沃克大讲堂 第一课 总结</div> #
 # <p align=center>思特沃克大讲堂 第一课 总结</p> #
-# <center>思特沃克大讲堂 第一课 总结</center> #
 ## 活动总结 ##
 ### Warm up Welcome ###
 ThoughtWorks大讲堂的第一次课程，第一项内容是自我介绍，该项不同于我以前经历过的任何一种自我介绍，这里把自我介绍变成了一种游戏，通过小组成员重复介绍前面成员说的内容，能很好的让小组内成员记住其他伙伴，通过派小组代表介绍本组成员的方式，让大家更容易记住其他TWer.
@@ -11,7 +9,7 @@ ThoughtWorks大讲堂的第一次课程，第一项内容是自我介绍，该�
 - 第二个人：他是喜欢打篮球的某某，我是喜欢打羽毛球的某某；
 - 第三个人：他是喜欢打篮球的某某，她是喜欢打羽毛球的某某；我是喜欢敲代码的某某；
 - **......**
-![自我介绍最快的一组合影留念](https://github.com/LiaoXueqing/ThoughtWorks/blob/master/image/warm%20up%20welcome.jpg)<div style="text-align:center">warm up welcome 自我介绍最快的小组合影留念</div>
+![自我介绍最快的一组合影留念](https://github.com/LiaoXueqing/ThoughtWorks/blob/master/image/warm%20up%20welcome.jpg)<p align=center>warm up welcome 自我介绍最快的小组合影留念</p>
 
 ### Culture ###
 企业文化企业的灵魂，是由企业的价值观、信念、仪式、符号、处事方式等组成的其特有的文化形象，是企业生产经营和管理活动中所创造的具有该企业特色的精神财富和物质形态。如果直接讲TW的企业文化，并对每一项内容进行讲解的话，我想很快就会再也记不清每一项文化内容的具体含义。讲师通过分组，让每组讨论抽到的企业文化内容的具体内涵，并以绘画的形式展现给所有New TWer，讲师再对每组讲解的内容进行补充。这种形式，让我们参与了对企业文化内涵的挖掘，而绘画并讲解展示的形式，让每条企业文化内容变得鲜活起来，让我们能更好的理解其意义。
