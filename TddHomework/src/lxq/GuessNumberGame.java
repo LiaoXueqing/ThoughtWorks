@@ -14,50 +14,22 @@ import java.util.Scanner;
 * */
 public class GuessNumberGame {
     private Guess guess = new Guess();
-    private AnswerGenerator answerGenerator = new AnswerGenerator();
-    private CompareNumber compareNumber = new CompareNumber();
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         new GuessNumberGame().run();
     }
-    /**
-     * 判断number是否有重复位
-     * 4位都不相等，返回true
-     * 4位有相等的数，返回false
-     */
-    private boolean numberIsDifferent(int number){
-        boolean flag = true;
-        String numberAsString = String.valueOf(number);
-        char[] numberAsChar = numberAsString.toCharArray();
-        Arrays.sort(numberAsChar);
-        for(int i=1;i<numberAsChar.length;i++){
-            /*有重复的位数*/
-            if(numberAsChar[i]==numberAsChar[i-1]){
-                flag = false;
-                break;
-            }
-        }
-        return flag;
-    }
 
-    public void run(){
-        int answerDigit = answerGenerator.generatorNumber();
+    private void run() {
         Scanner sc = new Scanner(System.in);
-        String result = "";
         int guessDigit = 0;
         int count_guess = 6;
         System.out.println("Welcome!");
         System.out.println();
-        while(count_guess>0){
-            System.out.println("Please input your number("+count_guess+"): ");
+        while (count_guess > 0) {
+            System.out.println("Please input your number(" + count_guess + "): ");
             guessDigit = sc.nextInt();
-            if(!numberIsDifferent(guessDigit)){
-                System.out.println("Cannot input duplicate numbers!");
-                count_guess--;
-                continue;
-            }
-            result = compareNumber.compareToAnswer(answerDigit,guessDigit);
-            if("4A0B".equals(result)){
+            String result = guess.guessTheDigit(guessDigit);
+            if ("4A0B".equals(result)) {
                 System.out.println("Congratulations!");
                 break;
             }
@@ -65,8 +37,9 @@ public class GuessNumberGame {
             System.out.println();
             count_guess--;
         }
-        if(count_guess==0){
+        if (count_guess == 0) {
             System.out.println("Game Over");
         }
     }
+
 }
