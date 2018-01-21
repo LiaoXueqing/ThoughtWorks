@@ -13,7 +13,6 @@ import java.util.Scanner;
 * 当猜中时，不要打印4A0B,而是打印”Congratulations!”并退出
 * */
 public class GuessNumberGame {
-    private Guess guess = new Guess();
     private AnswerGenerator answerGenerator = new AnswerGenerator();
     private CompareNumber compareNumber = new CompareNumber();
 
@@ -28,7 +27,7 @@ public class GuessNumberGame {
     private boolean numberIsDifferent(int number){
         boolean flag = true;
         String numberAsString = String.valueOf(number);
-        char[] numberAsChar = numberAsString.toCharArray();
+        char[] numberAsChar = new Utils().intToCharArray(number);
         Arrays.sort(numberAsChar);
         for(int i=1;i<numberAsChar.length;i++){
             /*有重复的位数*/
@@ -41,7 +40,7 @@ public class GuessNumberGame {
     }
 
     public void run(){
-        int answerDigit = answerGenerator.generatorNumber();
+        int answerDigit = answerGenerator.generatorFourDigits();
         Scanner sc = new Scanner(System.in);
         String result = "";
         int guessDigit = 0;

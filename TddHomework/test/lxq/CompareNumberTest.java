@@ -1,5 +1,6 @@
 package lxq;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.is;
@@ -17,7 +18,8 @@ public class CompareNumberTest {
      */
     @Test
     public void should_0A0B_Return_0A0B(){
-        assertThat("0A0B",is(compareNumber.compareToAnswer(1234,5678)));
+        Assert.assertEquals("0A0B",compareNumber.compareToAnswer(1234,5678));
+//        assertThat("0A0B",is(compareNumber.compareToAnswer(1234,5678)));
     }
     @Test
     public void should_1A0B_Return_1A0B(){

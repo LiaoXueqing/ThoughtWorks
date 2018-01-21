@@ -8,9 +8,9 @@ import java.util.Arrays;
 public class Guess {
     private CompareNumber compareNumber = new CompareNumber();
     private AnswerGenerator answerGenerator = new AnswerGenerator();
-
+    private int answerDigit =  answerGenerator.generatorFourDigits();
     public String guessTheDigit(int guessDigit){
-        int answerDigit = answerGenerator.generatorNumber();
+        //int answerDigit = answerGenerator.generatorNumber();
         String result = compareNumber.compareToAnswer(answerDigit,guessDigit);
         return result;
     }
