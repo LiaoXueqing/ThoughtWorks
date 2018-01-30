@@ -1,17 +1,15 @@
 package lxq;
 
-import java.util.Arrays;
-
 /*
 * 第三问 Guess类，集成前两问
 */
 public class Guess {
     private CompareNumber compareNumber = new CompareNumber();
     private AnswerGenerator answerGenerator = new AnswerGenerator();
-    private int answerDigit =  answerGenerator.generatorFourDigits();
+    private int answer=answerGenerator.generatorNumber();
+
     public String guessTheDigit(int guessDigit){
-        //int answerDigit = answerGenerator.generatorNumber();
-        String result = compareNumber.compareToAnswer(answerDigit,guessDigit);
+        String result = compareNumber.compareToAnswer(answer,guessDigit);
         return result;
     }
 }

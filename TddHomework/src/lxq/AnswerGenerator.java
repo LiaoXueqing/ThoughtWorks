@@ -1,5 +1,7 @@
 package lxq;
 
+import lxq.util.CharArrayUtil;
+
 import java.util.*;
 
 /*
@@ -9,6 +11,7 @@ import java.util.*;
 public class AnswerGenerator {
     /**
      * 生成随机数
+     *
      * @return
      */
     public int generatorFourDigits(){
