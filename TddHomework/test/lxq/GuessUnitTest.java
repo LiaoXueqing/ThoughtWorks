@@ -51,5 +51,4 @@ public class GuessUnitTest {
         String result = guess.guessTheDigit(1432);
         assertTrue("2A2B".equals(result));
     }
-
 }

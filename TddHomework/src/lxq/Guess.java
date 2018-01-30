@@ -6,7 +6,6 @@ package lxq;
 public class Guess {
     private CompareNumber compareNumber = new CompareNumber();
     private AnswerGenerator answerGenerator = new AnswerGenerator();
-
     private int answer=answerGenerator.generatorNumber();
 
     public String guessTheDigit(int guessDigit){

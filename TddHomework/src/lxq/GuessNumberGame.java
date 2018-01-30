@@ -13,13 +13,15 @@ import java.util.Scanner;
 * 当猜中时，不要打印4A0B,而是打印”Congratulations!”并退出
 * */
 public class GuessNumberGame {
+
     private Guess guess = new Guess();
+
 
     public static void main(String[] args) {
         new GuessNumberGame().run();
     }
-
     private void run() {
+
         Scanner sc = new Scanner(System.in);
         int guessDigit = 0;
         int count_guess = 6;

@@ -14,65 +14,23 @@ public class AnswerGenerator {
      *
      * @return
      */
-    private int getAnswer() {
-        int answer = (int) (Math.random() * (9999 - 1000 + 1)) + 1000;
-        return answer;
-    }
-
-
-    private int getAnswerNew() {
-        List<Integer> list = Arrays.asList(new Integer[]{0, 1, 2, 3, 4, 5, 6, 7, 8, 9});
+    public int generatorFourDigits(){
+        List<Integer> list = new ArrayList<Integer>();
+        for(int i=0;i<10;i++){
+            list.add(i);
+        }
         Collections.shuffle(list);
         int left = 4;
-        String s = "";
-        Iterator<Integer> it = list.iterator();
-        while (left > 0) {
-            int now = it.next();
-            if (left == 1 && now == 0) {
-                now = it.next();
+        ListIterator<Integer> it = list.listIterator();
+        String result = "";
+        while((left--)!=0){
+            int n = it.next();
+            if(n==0 && left==1){
+                n = it.next();
             }
-            s = now + s;
-            left--;
+            result = n+result;
         }
-        return Integer.parseInt(s);
-    }
-
-
-    public static void main(String[] args) {
-        int i = 0;
-        while (i++ < 100) {
-            System.out.println(new AnswerGenerator().getAnswerNew());
-        }
-    }
-
-
-    /**
-     * 判断生成的随机数是否存在重复的数值
-     *
-     * @return
-     */
-    public int generatorNumber() {
-        int answer = getAnswer();
-        boolean flag = true;
-
-        do {
-            char[] answerAsChar = CharArrayUtil.getCharArrayFromInt(answer);
-            Arrays.sort(answerAsChar);
-            for (int i = 1; i < answerAsChar.length; i++) {
-                /*有重复的位数,重新生成随机数，并跳出内层循环*/
-                if (answerAsChar[i] == answerAsChar[i - 1]) {
-                    flag = false;
-                    answer = getAnswer();
-                    break;
-                }
-
-                if (i == answerAsChar.length - 1 && answerAsChar[i] != answerAsChar[i - 1]) {
-                    flag = true;
-                }
-
-            }
-
-        } while (!flag);
+        int answer = Integer.parseInt(result);
         return answer;
     }
 }
